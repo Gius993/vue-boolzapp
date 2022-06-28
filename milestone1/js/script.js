@@ -87,6 +87,11 @@ var app = new Vue(
 					],
 				},
 			]
+		},
+		methods:{
+			getAvatarimg (utent){
+			return	`img/avatar${utent.avatar}.jpg`
+			}
 		}
 	}
 );
