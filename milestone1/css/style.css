@@ -138,3 +138,29 @@ img{
 	font-size: 25px;
 	margin-left: 5px;
 }
+/*****messaggi****/
+.message-container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	
+}
+.white{
+	width: 450px;
+	font-size: 25px;
+	background-color: white;
+	padding: 10px;
+	border-radius: 10px;
+}
+.data{
+	color: #eaeaea;
+	font-size: 15px;
+	text-align: end;
+}
+.green{
+	width: 450px;
+	font-size: 25px;
+	background-color: #d5f9ba;;
+	padding: 10px;
+	border-radius: 10px;
+}
