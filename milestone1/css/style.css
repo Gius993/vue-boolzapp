@@ -104,4 +104,37 @@ img{
 	font-size: 15px;
 	color: #b1b1b1;
 }
-
+.inputs{
+	background-color: #eaeaea;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+}
+.inputs input{
+	width: 90%;
+	height: 80%;
+}
+/***contatti***/
+.zona-contatti{
+	padding: 10px;
+}
+.contatto{
+	display: flex;
+	margin-top: 15px;
+}
+.contatto-img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.contatto-img img{
+	height: 100%;
+	object-fit: cover;
+}
+.name-contatto{
+	font-size: 25px;
+	margin-left: 5px;
+}
