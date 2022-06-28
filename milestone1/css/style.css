@@ -124,6 +124,9 @@ img{
 	display: flex;
 	margin-top: 15px;
 }
+.contatto:hover{
+	background-color: #eaeaea;
+}
 .contatto-img{
 	width: 60px;
 	height: 60px;
