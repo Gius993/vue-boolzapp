@@ -119,6 +119,7 @@ img{
 /***contatti***/
 .zona-contatti{
 	padding: 10px;
+	overflow-y: scroll;
 }
 .contatto{
 	display: flex;
@@ -146,7 +147,7 @@ img{
 	display: flex;
 	flex-direction: column;
 	padding: 100px;
-	/* height: calc(100% - 100px); */
+	/*height: calc(100% - 100px); */	
 }
 .green-message{
 	align-self: flex-end;
