@@ -112,8 +112,7 @@
 					</div>
 					<!--messagi-->
 					<div class="message-container"
-					 v-for="message in contacts[activeUtent].messages" 
-					 >
+					 v-for="message in contacts[activeUtent].messages">
 						<div :class="message.status === 'sent' ? 'green' : 'white'" class="messages-minicont">
 							<p>	{{message.text}}</p>								
 						   <p>	{{message.date}}</p>
