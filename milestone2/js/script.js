@@ -9,6 +9,7 @@ var app = new Vue(
 	{
 		el: '#root',
 		data: {
+			
 			contacts: [
 				{
 					name: 'Michele',
@@ -93,13 +94,16 @@ var app = new Vue(
 						}
 					],
 				},
-			]
+			],
+			activeUtent: 0,
 		},
 		methods:{
 			getAvatarimg (utent){
 			return	`img/avatar${utent.avatar}.jpg`;
 			},
-			
-			},			
-		}		
+			changeChat(i) {
+				this.activeUtent = i;
+			},
+		},			
+	}		
 );

@@ -63,7 +63,10 @@
 						</div>
 						<!--contatti-->
 						<div clas="zona-contatti">
-							<div class="contatto" v-for="(utent, index) in contacts">
+							<div class="contatto" 
+							v-for="(utent, index) in contacts"
+							 @click="changeChat(index)"
+							 >
 								<div class="contatto-img">
 									<img :src="getAvatarimg(utent)" alt="">
 								</div>
@@ -84,12 +87,12 @@
 							<div class="fix-accesso">
 									<div class="img-utente">
 										<div class="logo">
-											<img src="img/avatar_1.jpg" alt="logo">
+											<img :src="'img/avatar' + contacts[activeUtent].avatar + '.jpg'" alt="contacts[c].name" alt="logo">
 		
 										</div>
 									<div class="nome">
 										<div class="nome-int">
-											Sam
+											<p>{{contacts[activeUtent].name}}</p>
 										</div>
 										
 										<div class="font-access">ultimo accesso</div>
@@ -112,13 +115,13 @@
 						<!--white-->
 						<div class="white-message">
 							<div class="white">								
-									La Marianna va in campagna																									
+																															
 							</div>
 						</div>
 						<!--green-->
 						<div class="green-message ">
 							<div class="green">								
-									Sicuro													
+																			
 							</div>
 						</div>
 					</div>
