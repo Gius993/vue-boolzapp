@@ -156,9 +156,12 @@ img{
 .green-message{
 	align-self: flex-end;
 	margin-top: 20px;
+	word-break: break-word;
+
 }
 .white-message{
 	margin-top: 20px;
+	word-break: break-word;
 }
 .white{
 	width: 450px;
