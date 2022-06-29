@@ -130,7 +130,10 @@
 								<i class="fa-solid fa-face-smile"></i>
 							</div>
 							<div class="chat-message">
-								<input type="text" placeholder="Scrivi messaggio" id="message-bar" v-model="newMessage.text" @keyup.enter="addMessage">
+								<input type="text" placeholder="Scrivi messaggio" 
+								id="message-bar"
+								 v-model="newMessage"
+								 @keyup.enter="addMessage">
 							</div>
 							<div class="smile">
 								<i class="fa-solid fa-microphone"></i>
