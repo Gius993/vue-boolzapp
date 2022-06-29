@@ -125,20 +125,17 @@ var app = new Vue(
 			},
 
 			answerMessage(){
-				this.timer = setTimeout(function (){
+				this.timer = setTimeout( ()=>{
 					const messageObject ={
 						date: new Date().toLocaleString(),
 						text: 'OK',
 						status: 'received',
-					};
-
-					if(this.newMessage != ''){					
-						this.contacts[0].messages.push(messageObject);				
-					}
-
-				},1000);			
+					};								
+					this.contacts[this.activeUtent].messages.push(messageObject);
+				},1000);	
+				
 			}
-
+			
 		},			
 	}		
 );
