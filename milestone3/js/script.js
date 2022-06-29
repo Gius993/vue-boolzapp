@@ -112,7 +112,10 @@ var app = new Vue(
 			addMessage(){
 				if(this.newMessage.text != ''){
 					this.contacts[this.activeUtent].messages.push(this.newMessage);
-				}
+				};
+				
+				this.answerMessage
+
 			}
 		},			
 	}		

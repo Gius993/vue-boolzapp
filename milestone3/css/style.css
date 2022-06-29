@@ -147,21 +147,19 @@ img{
 	margin-left: 5px;
 }
 /*****messaggi****/
+.maxi-container{
+	height: 90%;
+    overflow-y: auto;
+}
 .message-container{
 	padding: 100px;
-	overflow: auto;
 	/*height: calc(100% - 100px); */	
 }
 
-.messages-minicont{
-	display: flex;
-	flex-direction: column;
-}
+
 .white{
-	align-self: flex-end;
-	margin-top: 10px;
-	word-break: break-word;	
-	font-size: 25px;
+	float: right;
+	font-size: 20px;
 	background-color: white;
 	padding: 1rem;
 	width: max-content;
@@ -175,16 +173,13 @@ img{
 .green{
 
 	
-	
+	float: left;
 	font-size: 25px;
 	background-color: #d5f9ba;;
 	padding: 1rem;
 	border-radius: 10px;
 	width: max-content;
 	text-align: left;
-	align-self: flex-start;
-	margin-top: 10px;
-	word-break: break-word;
 }
 /***chat**/
 .chat{
