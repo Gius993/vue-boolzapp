@@ -96,6 +96,11 @@ var app = new Vue(
 				},
 			],
 			activeUtent: 0,
+			newMessage: {
+				date: new Date().toLocaleString(),
+				text: '',
+				status: 'sent',
+			},
 		},
 		methods:{
 			getAvatarimg (utent){
@@ -104,6 +109,11 @@ var app = new Vue(
 			changeChat(i) {
 				this.activeUtent = i;
 			},
+			addMessage(){
+				if(this.newMessage.text != ''){
+					this.contacts[this.activeUtent].messages.push(this.newMessage);
+				}
+			}
 		},			
 	}		
 );
