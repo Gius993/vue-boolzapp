@@ -111,19 +111,15 @@
 						</div>
 					</div>
 					<!--messagi-->
-					<div class="message-container">
-						<!--white-->
-						<div class="white-message">
-							<div class="white">								
-																															
-							</div>
+					<div class="message-container"
+					 v-for="message in contacts[activeUtent].messages" 
+					 >
+						<div :class="message.status === 'sent' ? 'green' : 'white'" class="messages-minicont">
+							<p>	{{message.text}}</p>								
+						   <p>	{{message.date}}</p>
+							
 						</div>
-						<!--green-->
-						<div class="green-message ">
-							<div class="green">								
-																			
-							</div>
-						</div>
+						
 					</div>
 					<!--chat-->
 					<div class="chat">

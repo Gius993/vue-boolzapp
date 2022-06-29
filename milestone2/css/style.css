@@ -153,17 +153,12 @@ img{
 	padding: 100px;
 	/*height: calc(100% - 100px); */	
 }
-.green-message{
+
+
+.white{
 	align-self: flex-end;
 	margin-top: 20px;
 	word-break: break-word;
-}
-.white-message{
-	align-self: flex-start;
-	margin-top: 20px;
-	word-break: break-word;
-}
-.white{
 	width: 450px;
 	font-size: 25px;
 	background-color: white;
@@ -181,6 +176,9 @@ img{
 	background-color: #d5f9ba;;
 	padding: 10px;
 	border-radius: 10px;
+	align-self: flex-start;
+	margin-top: 20px;
+	word-break: break-word;
 }
 /***chat**/
 .chat{
