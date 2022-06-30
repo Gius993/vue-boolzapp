@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!--scheletro principale -->
+	<div id="root">
+		<div class="mast-container">
+			<!--container-->
+			<div class="container">
+				<!--container left-->
+				<div class="container-left">
+					<!--barra superiore-->
+					<div class="superior-bar border-add flex-barA">
+						<!--nome-->
+						<div class="utent-name">
+							
+							<div class="img-utente">
+								<div class="logo">
+									<img src="img/avatar_1.jpg" alt="logo">
+								</div>
+							
+								<div class="nome">
+									Nome Utente
+								</div>
+							</div>
+						
+						</div>
+						<!--opzioni-->
+						<div class="option">
+								<a href="#"><i class="fas fa-circle-notch my-3 mx-2 py-2 px-1"></i></a>
+                                <a href="#"><i class="fas fa-comment-alt my-3 mx-2 py-2 px-1"></i></a>
+                                <a href="#"><i class="fas fa-ellipsis-v my-3 mx-2 py-2 px-1"></i></a>                     
+						</div>
+					</div>
+					<!--inferior zone-->
+					<div class="inferior-zone-container">
+						<!--div blu-->
+						<div class="notific-desktop">
+							<div class="campanella">
+								<i class="fas fa-comment-alt my-3 mx-2 py-2 px-1"></i>
+							</div>
+							<div class="txt-notific">
+								<div class="notific">
+									Ricevi notifiche di nuovi messaggi
+								</div>
+								<div class="active-notific">
+									Attiva notifiche
+								</div>
+							</div>
+						</div>
+						<!--input-->
+						<div class="inputs">
+							<input type="text" 
+							placeholder="Cerca o inizia nuova chat">
+						</div>
+						<!--contatti-->
+						<div clas="zona-contatti">
+							<div class="contatto" 
+							v-for="(utent, index) in contacts"
+							 @click="changeChat(index)"
+							 >
+								<div class="contatto-img">
+									<img :src="getAvatarimg(utent)" alt="">
+								</div>
+								<div class="name-contatto">
+									{{ utent.name }}
+								</div>
+								
+							</div>
+						</div>	
+					</div>
+				</div>
+				<!--container-right-->
+				<div class="container-right">
+					<div class="superior-bar border-add flex-barA">
+						<!--nome-->
+						<div class="utent-name">
+							
+							<div class="fix-accesso">
+									<div class="img-utente">
+										<div class="logo">
+											<img :src="'img/avatar' + contacts[activeUtent].avatar + '.jpg'" alt="contacts[c].name" alt="logo">
+		
+										</div>
+									<div class="nome">
+										<div class="nome-int">
+											<p>{{contacts[activeUtent].name}}</p>
+										</div>
+										
+										<div class="font-access">ultimo accesso</div>
+									</div>
+									
+									
+								</div>
+							</div>
+						
+						</div>
+						<!--opzioni-->
+						<div class="option">
+							<a href="#"><i class="fas fa-circle-notch my-3 mx-2 py-2 px-1"></i></a>
+                           	<a href="#"><i class="fas fa-comment-alt my-3 mx-2 py-2 px-1"></i></a>
+                        	<a href="#"><i class="fas fa-ellipsis-v my-3 mx-2 py-2 px-1"></i></a>                   
+						</div>
+					</div>
+					<!--messagi-->
+					<div class="maxi-container">
+
+						<div class="message-container"
+						 v-for="message in contacts[activeUtent].messages">
+							<div :class="message.status === 'sent' ? 'green' : 'white'" class="messages-minicont">
+								<p>	{{message.text}}</p>								
+							   <p>	{{message.date}}</p>
+								
+							</div>
+							
+						</div>
+					</div>
+					<!--chat-->
+					<div class="chat">
+						<div class="container-chat">
+							<div class="smile">
+								<i class="fa-solid fa-face-smile"></i>
+							</div>
+							<div class="chat-message">
+								<input type="text" placeholder="Scrivi messaggio" 
+								id="message-bar"
+								 v-model="newMessage"
+								 @keyup.enter="addMessage">
+							</div>
+							<div class="smile">
+								<i class="fa-solid fa-microphone"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!--fine container primario-->
+			</div>
+			<!--root end-->
+			
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+	<script src="https://unpkg.com/dayjs@1.8.21/plugin/utc.js"></script>	
+	<script>dayjs.extend(window.dayjs_plugin_utc)</script>
+
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
