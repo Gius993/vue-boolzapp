@@ -107,7 +107,8 @@ var app = new Vue(
 			],
 			activeUtent: 0,
 			newMessage: '',
-			searchInput: ''
+			searchInput: '',
+			menuControl: ''
 		},
 		methods:{
 			getAvatarimg (utent){
@@ -155,7 +156,14 @@ var app = new Vue(
 				);
 			},
 			//al click mi apre la finestra impostazioni
-			
+			menuExplore(){
+				this.menuControl = ` 
+			<div class="option-menu">
+				<a href="">impostazioni</a>
+				<a href="">canella messaggio</a>
+			</div>
+			`
+			}
 			
 		},			
 	}		
