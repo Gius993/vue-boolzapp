@@ -121,6 +121,9 @@
 						<div class="message-container"						
 						 v-for="message in contacts[activeUtent].messages">
 							<div :class="message.status === 'sent' ? 'green' : 'white'" class="messages-minicont">
+								<a href="">
+									<i class="fa-solid fa-angle-down"></i>
+								</a>
 								<p>	{{message.text}}</p>								
 							   <p>	{{message.date}}</p>
 								

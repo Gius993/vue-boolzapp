@@ -214,3 +214,8 @@ img{
 	align-items: center;
 	justify-content: center;
 }
+
+.message-container a{
+	float: right;
+	color: #b1b1b1;
+}
