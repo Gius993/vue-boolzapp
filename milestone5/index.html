@@ -122,8 +122,9 @@
 						 v-for="message in contacts[activeUtent].messages">
 							<div :class="message.status === 'sent' ? 'green' : 'white'" class="messages-minicont">
 								<div class="menù-container">
-									<i class="fa-solid fa-angle-down" 
+									<i class="fa-solid fa-angle-down" @click="menuExplore()"
 									>
+									{{ menuControl }}
 										 <!-- <div class="option-menu">
 											<a href="">impostazioni</a>
 											<a href="">canella messaggio</a>
