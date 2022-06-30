@@ -104,6 +104,7 @@ var app = new Vue(
 			],
 			activeUtent: 0,
 			newMessage: '',
+			searchInput: ''
 		},
 		methods:{
 			getAvatarimg (utent){
@@ -140,11 +141,11 @@ var app = new Vue(
 			},
 			
 			search(){
-				this.contacts.forEach((contact) => {
-					if(!contact.name.toLowerCase().includes(this.searchInput.toLowerCase())){
-							 contact.visible = false;
+				this.contacts.forEach((utent) => {
+					if(!utent.name.toLowerCase().includes(this.searchInput.toLowerCase())){
+							 utent.visible = false;
 						} else {
-							 contact.visible = true;
+							 utent.visible = true;
 						}
 			
 					}

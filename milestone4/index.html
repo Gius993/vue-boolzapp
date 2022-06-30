@@ -61,14 +61,14 @@
 						<div class="inputs">
 							<input type="text" 
 							@keyup="search()"	
-							v-model.trim="searchInput"
+							v-model="searchInput"
 							placeholder="Cerca o inizia nuova chat">
 						</div>
 						<!--contatti-->
 						<div clas="zona-contatti">
 							<div class="contatto" 							
-							v-for="(utent, index) in contact"
-							v-if="contact.visible"
+							v-if="utent.visible"
+							v-for="(utent, index) in contacts"
 							 @click="changeChat(index)"
 							 >
 								<div class="contatto-img">
