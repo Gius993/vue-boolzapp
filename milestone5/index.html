@@ -119,16 +119,16 @@
 					<div class="maxi-container">
 
 						<div class="message-container"						
-						 v-for="message in contacts[activeUtent].messages">
+						 v-for="(message, index) in contacts[activeUtent].messages">
 							<div :class="message.status === 'sent' ? 'green' : 'white'" class="messages-minicont">
 								<div class="menù-container">
-									<i class="fa-solid fa-angle-down" @click="menuExplore()"
+									<i class="fa-solid fa-angle-down" @click="menuExplore(index)"
 									>
-									{{ menuControl }}
-										 <!-- <div class="option-menu">
+									
+									 <div id="option-menu" v-if="menuControl && index === activeMessage">
 											<a href="">impostazioni</a>
 											<a href="">canella messaggio</a>
-										</div>  -->
+									</div> 
 									</i>
 								</div>
 								<p>	{{message.text}}</p>								
