@@ -60,12 +60,15 @@
 						<!--input-->
 						<div class="inputs">
 							<input type="text" 
+							@keyup="search()"	
+							v-model.trim="searchInput"
 							placeholder="Cerca o inizia nuova chat">
 						</div>
 						<!--contatti-->
 						<div clas="zona-contatti">
-							<div class="contatto" 
-							v-for="(utent, index) in contacts"
+							<div class="contatto" 							
+							v-for="(utent, index) in contact"
+							v-if="contact.visible"
 							 @click="changeChat(index)"
 							 >
 								<div class="contatto-img">
@@ -88,7 +91,8 @@
 							<div class="fix-accesso">
 									<div class="img-utente">
 										<div class="logo">
-											<img :src="'img/avatar' + contacts[activeUtent].avatar + '.jpg'" alt="contacts[c].name" alt="logo">
+											<img :src="'img/avatar' + contacts[activeUtent].avatar + '.jpg'" 
+											alt="contacts[c].name" alt="logo">
 		
 										</div>
 									<div class="nome">
@@ -114,7 +118,7 @@
 					<!--messagi-->
 					<div class="maxi-container">
 
-						<div class="message-container"
+						<div class="message-container"						
 						 v-for="message in contacts[activeUtent].messages">
 							<div :class="message.status === 'sent' ? 'green' : 'white'" class="messages-minicont">
 								<p>	{{message.text}}</p>								
